@@ -6,5 +6,5 @@ redis:
   type: "redis:3.0"
 
 elasticsearch:
-  type: "elasticsearch:5.2"
+  type: "elasticsearch:6.5"
   disk: 1024
