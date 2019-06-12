@@ -1,0 +1,21 @@
+
+name: app
+
+disk: 1024
+
+type: "python:2.7"
+
+hooks:
+    build: |
+        pip install -r requirements.pinned.txt
+    deploy: |
+        echo $(date)
+
+relationships:
+    mysql: "mysql:mysql"
+    redis: "redis:redis"
+    elasticsearch: "elasticsearch:elasticsearch"
+
+web:
+    commands:
+        start: python server.py
