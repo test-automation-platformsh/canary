@@ -90,3 +90,4 @@ def test_elasticsearch(instance):
 if __name__ == "__main__":
     http_server = gevent.wsgi.WSGIServer(('127.0.0.1', int(os.environ["PORT"])), app)
     http_server.serve_forever()
+    print("This is a useless never-reach print just to change the code\n")
